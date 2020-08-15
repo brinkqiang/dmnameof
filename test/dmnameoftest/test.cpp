@@ -25,7 +25,7 @@
 
 #define NAMEOF_ENUM_RANGE_MIN -120
 #define NAMEOF_ENUM_RANGE_MAX 120
-#include "dmnameof.h>
+#include "dmnameof.h"
 
 #include <string>
 #include <stdexcept>
