@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.2)
+
+PROJECT(dmnameof)
+
+LIST(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+INCLUDE(cmake/ModuleImport.cmake)
+INCLUDE(cmake/ModuleCompileOptions.cmake)
+ModuleSetCompileOptions()
+
+SET(DMNAMEOF_VERSION_MAJOR "1")
+SET(DMNAMEOF_VERSION_MINOR "0")
+SET(DMNAMEOF_VERSION_PATCH "1")
+SET(DMNAMEOF_VERSION "${DMNAMEOF_VERSION_MAJOR}.${DMNAMEOF_VERSION_MINOR}.${DMNAMEOF_VERSION_PATCH}")
+
+MESSAGE(STATUS "VERSION: ${DMNAMEOF_VERSION}")
+
+OPTION(USE_DMNAMEOF "use dmnameof" OFF)
+
+ModuleImportAll("thirdparty")
+ExeImport("test" "")
