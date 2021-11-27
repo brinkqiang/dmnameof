@@ -16,5 +16,4 @@ MESSAGE(STATUS "VERSION: ${DMNAMEOF_VERSION}")
 
 OPTION(USE_DMNAMEOF "use dmnameof" OFF)
 
-ModuleImportAll("thirdparty")
 ExeImport("test" "")
