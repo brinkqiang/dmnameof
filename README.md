@@ -26,6 +26,5 @@ dmnameof based on nameof
 ```cpp
 ```
 ## Contacts
-[![Join the chat](https://badges.gitter.im/brinkqiang/dmnameof/Lobby.svg)](https://gitter.im/brinkqiang/dmnameof)
 
 ## Thanks
