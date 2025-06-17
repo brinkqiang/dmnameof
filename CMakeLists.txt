@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.21)
 
 PROJECT(dmnameof)
 
@@ -7,13 +7,10 @@ INCLUDE(cmake/ModuleImport.cmake)
 INCLUDE(cmake/ModuleCompileOptions.cmake)
 ModuleSetCompileOptions()
 
-SET(DMNAMEOF_VERSION_MAJOR "1")
-SET(DMNAMEOF_VERSION_MINOR "0")
-SET(DMNAMEOF_VERSION_PATCH "1")
-SET(DMNAMEOF_VERSION "${DMNAMEOF_VERSION_MAJOR}.${DMNAMEOF_VERSION_MINOR}.${DMNAMEOF_VERSION_PATCH}")
 
-MESSAGE(STATUS "VERSION: ${DMNAMEOF_VERSION}")
+InterfaceImport("dmnameof" "include" "")
 
-OPTION(USE_DMNAMEOF "use dmnameof" OFF)
+if(PROJECT_IS_TOP_LEVEL)
+    ExeImport("test" "dmnameof")
+endif()
 
-ExeImport("test" "")
