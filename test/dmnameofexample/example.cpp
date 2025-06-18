@@ -216,5 +216,8 @@ int main() {
   std::cout << NAMEOF(std::string{"test"}) << std::endl; // ''
 #endif
 
+  auto tup = std::make_tuple<int, std::string, double>(1, "123", 21.1);
+  std::cout << NAMEOF_TYPE_EXPR(tup) << std::endl; // ''
+
   return 0;
 }
